@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+
+members = [
+    "papyrus-parser",
+    "papyrus-renderer",
+    "papyrus-cli",
+]
