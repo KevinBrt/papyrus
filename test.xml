@@ -1,5 +1,5 @@
 <document>
-    <page>
-        <p>Contenu du premier PDF généré</p>
+    <page orientation="L">
+        <text>Contenu du premier PDF généré</text>
     </page>
 </document>
