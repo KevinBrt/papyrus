@@ -1,7 +1,11 @@
 use papyrus_cli::args::parse_args;
 use papyrus_parser::parser;
+use papyrus_renderer::renderer;
 
 fn main() {
+    // Démarrer le chronomètre
+    let start_time = std::time::Instant::now();
+
     // Parse args and perform checks
     let args = parse_args();
 
@@ -12,7 +16,10 @@ fn main() {
     let parser = parser::Parser::new(args.source);
     parser.parse();
 
-    // TODO convert to taffy
+    // Call papyrus-renderer to render the PDF
+    let pdf = renderer::render();
 
-    // TODO call renderer with taffy layout and elements map
+    // Calculer et afficher le temps d'exécution
+    let duration = start_time.elapsed();
+    println!("Temps d'exécution: {:?}", duration);
 }

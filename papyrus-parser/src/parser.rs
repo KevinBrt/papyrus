@@ -2,10 +2,10 @@ use quick_xml::events::Event;
 use quick_xml::reader::Reader;
 use std::fs;
 
-use crate::tags::base::Element;
-use crate::tags::document::DocumentElement;
-use crate::tags::page::PageElement;
-use crate::tags::text::TextElement;
+use crate::tags::DocumentElement;
+use crate::tags::Element;
+use crate::tags::PageElement;
+use crate::tags::TextElement;
 
 #[derive(Debug)]
 pub struct DocumentNode {
